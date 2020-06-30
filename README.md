@@ -22,3 +22,19 @@ from appone import views
 path(‘hello/’, views.hello)      hello = nom de la fonction
 
 10) python manage.py runserver ==) mettre /hello lors de l’adresse.
+
+Exemple (exo)
+    - créer une app Django apptwo 
+    - une route, une vue et afficher la réponse "This is a Django apptwo"
+    
+1) python manage.py startapp apptwo
+2) settings.py =) 'apptwo.apps.ApptwoConfig',
+3) urls =) from apptwo import views as apptwo_views
+           path('django_two/' apptwo_views.django_two)
+4) faire alt + entrée pour choisir "create function django_two"
+5) views.py de apptwo : from django.http import HttpResponse
+6) ajout du parametre (request)
+7) return HttpResponse("This is a Django apptwo")
+8) Terminal : python manage.py runserver
+9) Ajoute django_two/ à la suite de l'adresse
+

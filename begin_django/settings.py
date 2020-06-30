@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'apponetest.apps.ApponetestConfig',
+    'apptwo.apps.ApptwoConfig',
 ]
 
 MIDDLEWARE = [

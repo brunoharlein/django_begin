@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
 from apponetest import views
+from apptwo import views as apptwo_views
+# import de mon app et sa vue en alias ici
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', views.hello)
+    path('hello/', views.hello),
+    path('django_two/', apptwo_views.django_two),
+    # création de l'url puis alt + entrée pour faire directement une création de function dans la vue
 ]
