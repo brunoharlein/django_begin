@@ -10,6 +10,21 @@ def django_two(request):
 
 def django_detail(request, category, year=0, month=0, day=0):
     template = loader.get_template('apptwo/index.html')
-    return HttpResponse(template.render({}, request))
+
+    picture = {
+        'filename': 'bike.jpg',
+        'categories': ['color', 'sports']
+    }
+
+    context = {
+        'title': 'This is a new text title',
+        'category': category,
+        'year': year,
+        'month': month,
+        'day': day,
+        'picture': picture,
+    }
+
+    return HttpResponse(template.render(context, request))
 
 # création d'une vue qui retournera ce que l'utilisateur entrera dans l'url

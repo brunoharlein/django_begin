@@ -106,4 +106,29 @@ def picture_detail(request, category, year=0, month=0, day=0):
 
 runserver puis affichage de l'url details
 
+ASSIGNER DES VARIABLES
+
+apptwo =) views.py
+context = { 'title': 'This is a new text title',
+            'category': category,
+            'year': year,
+            'month': month,
+            'day': day,
+            }
+            
+Ne pas oublier de rajouter la variable context dans le return à la place des {}
+            
+apptwo =) index.html
+h1 {{title}} h1
+div category : {{category}}
+    year : {{year}}
+    month : {{month}}
+    day : {{day}}
+
+    {# title block here #}
+pour un commentaire sur un block (celui-ci ne sera pas visible dans l'inspecteur de code)
+
+{% comment "test comment" %}
+    {% endcomment %}
+Pour commenter plusieurs blocks et toujours invisible dans l'inspecteur de code 
 

@@ -5,8 +5,25 @@
     <title>test apptwo templates</title>
 </head>
 <body>
-    <h1>testing templates</h1>
+    <h1> {{title}}</h1>
+    {# title block here #}
     <p>lorem ipsun text</p>
+
+    <div>
+        category: {{category}},
+        year: {{year}},
+        month: {{month}},
+        day: {{day}},
+    </div>
+
+    <h2> Acces variable detail</h2>
+    <div>
+        filename : {{picture.filename}},
+        category : {{picture.categories.0}},
+    </div>
+
+    {% comment "test comment" %}
+    {% endcomment %}
 
 </body>
 </html>
