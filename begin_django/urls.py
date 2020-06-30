@@ -14,15 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from apponetest import views
-from apptwo import views as apptwo_views
-# import de mon app et sa vue en alias ici
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', views.hello),
-    path('django_two/', apptwo_views.django_two),
+    path('apptwo/', include('apptwo.urls'))
+
     # création de l'url puis alt + entrée pour faire directement une création de function dans la vue
+
 ]
