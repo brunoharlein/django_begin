@@ -92,3 +92,18 @@ Lorsque nous lançons le runserver il faut bien mettre le apptwo/ pour tomber su
 Maintenant nous avons deux fichiers urls.py mais ils sont moins chargés
 
 
+DECOUVRIR LES TEMPLATES
+
+dossier apptwo ==) templates ==) apptwo ==) index.html
+remplir le fichier HTML avec deux trois trucs 
+
+apptwo =) views.py
+from django.template import loader
+
+def picture_detail(request, category, year=0, month=0, day=0):
+    template = loader.get_template('apptwo/index.html')
+    return HttpResponse(template.render({}, request))
+
+runserver puis affichage de l'url details
+
+
