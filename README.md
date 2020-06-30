@@ -72,7 +72,7 @@ class TwoDigitDayConverter:
 ensuite dans apptwo/urls.py :
 
 from django.urls import register_converter
-# pour pouvoir enregistrer notre convertisseur dans le routing
+pour pouvoir enregistrer notre convertisseur dans le routing
 
 from apptwo import converters
 
